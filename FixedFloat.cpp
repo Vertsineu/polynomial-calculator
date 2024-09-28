@@ -124,6 +124,8 @@ FixedFloat::FixedFloat(uint16_t base, uint16_t int_digit_len, uint16_t dec_digit
     if (str[i] == '-') {
         sign = true;
         i++;
+    } else if (str[i] == '+') {
+        i++;
     }
     // skip leading zeros
     while (str[i] == '0' && i < size) i++;
